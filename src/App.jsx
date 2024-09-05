@@ -1,9 +1,10 @@
 import './App.css'
 import Footer from './components/Footer'
-import Form from './components/Form'
 import Header from './components/Header'
-import List from './components/List'
-import Video from './components/Video'
+import Home from '../pages/Home'
+
+import APIRickAndMorty from '../pages/APIRickAndMorty'
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   
@@ -11,7 +12,12 @@ function App() {
     <>
     <Header />
 
-    <main class="container">
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Rick and Morty" element={<APIRickAndMorty />} />
+      </Routes>
+    
+    {/* <main class="container">
         <section>
             <h2>Sobre mim</h2>
             <li>Oi meu nome é Victor e tenho 16 anos.</li>
@@ -31,7 +37,7 @@ function App() {
         <List titulo="Dicas"/>
         <Video />
         <Form />
-</main>
+</main> */}
 <Footer />
     </>
   )
